@@ -10,12 +10,28 @@
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange= function()
         {
-            if(xhr.readyState===4 && xhr.status === 200)
-            {
-                data = JSON.parse(xhr.responseText);
+            if (xhr.readyState === 4) {
+               if (xhr.status === 200) {
+               data = JSON.parse(xhr.responseText);
+               } else {
+               var errorMessage = "Error loading embedConfig.json is not available";
+               showError(errorMessage);
+               }
             }
         }
         xhr.send();
+
+        function showError(message) {
+            var ErrorPopup = document.getElementById("ErrorPopup");
+            var ErrorContent = document.getElementById("ErrorContent");
+            ErrorContent.textContent = message;
+            ErrorPopup.style.display = "block";
+            // Hiding remaining content
+            var container = document.getElementById("container");
+            var viewerSection = document.getElementById("viewer-section");
+            container.style.display = "none";
+            viewerSection.style.display = "none";
+         }
      </script>    
       <script type="text/javascript" src="/webdesignerservice/scripts/jquery-1.10.2.min.js" defer ></script>
       <script type="text/javascript" src="/webdesignerservice/scripts/jquery.easing.1.3.min.js" defer ></script>
@@ -25,19 +41,25 @@
       
    </head>
    <body style="width: 100%;height: 100%">
-   <div id="container" >
-     <div class="header-section"> 
-        <div id="grid-title">All Data sources</div>
+      <!--Error modal for not appending embedConfig.json-->
+      <div id="ErrorPopup">
+         <div id="ErrorContent"></div>
+       </div> 
+       <!--Datasource Listing Container-->
+      <div id="container" >            
+      <div class="header-section"> 
+         <div id="grid-title">All Data sources</div>
+         </div>
+         <div id ="panel"></div>    
       </div>
-      <div id ="panel"></div>    
-   </div>
-   <div id="viewer-section">
-      <div id="viewer-header">
-            <button id="create-datasource">Create</button>
+      <!--Datasource view page for create and edit-->
+      <div id="viewer-section">
+         <div id="viewer-header">
+               <button id="create-datasource">Create</button>
+         </div>
+         <div id="datasource">
+            <div id="message" style="display: block; text-align: center; margin-top: 235px; font-size: 20px;">Please select any Data source to Edit</div>
       </div>
-      <div id="datasource">
-	        <div id="message" style="display: block; text-align: center; margin-top: 235px; font-size: 20px;">Please select any Data source to Edit</div>
-	  </div>
-   </div>
+      </div>
    </body>
 </html>
