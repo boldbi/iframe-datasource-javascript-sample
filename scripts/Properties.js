@@ -43,9 +43,9 @@ function getToken() {
 	  xhr.open("POST", dashboardServerApiUrl + "/token", false);
 	  xhr.setRequestHeader("Content-Type", "application/json");
 	  xhr.onreadystatechange = function () {
-			if (xhr.readyState === 4 && xhr.status === 200) {
-		  var data= JSON.parse(xhr.responseText);
-		  accessToken = data.access_token;
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			var data= JSON.parse(xhr.responseText);
+			accessToken = data.access_token;
 		}
 	  };
 	  xhr.send(JSON.stringify(apiRequest));
