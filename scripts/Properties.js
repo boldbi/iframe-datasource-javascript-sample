@@ -1,8 +1,8 @@
 var rootUrl = data.ServerUrl; 
 var siteIdentifier = data.SiteIdentifier;
-var email = data.UserEmail;
+var userEmail = data.UserEmail;
 var environment =data.Environment;
-var embed_secret = data.EmbedSecret; 
+var embedSecret = data.EmbedSecret; 
 
 var baseUrl = "";
 var dashboardServerApiUrl = "";
@@ -35,8 +35,8 @@ var accessToken="";
 
 function getToken() {
 	var apiRequest = {
-		username: email,
-		embed_secret: embed_secret,
+		username: userEmail,
+		embed_secret: embedSecret,
 		grant_type: "embed_secret"
 	  };	  
 	  var xhr = new XMLHttpRequest();
