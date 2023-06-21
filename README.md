@@ -1,4 +1,4 @@
-# BoldBI Datasource Iframe with JS Embedding
+# BoldBI Datasource Iframe with Javascript Embedding
 
   This application aims to demonstrate how to embed the data source designer module into your JavaScript-based web application using an iFrame.
   
