@@ -4,7 +4,7 @@
   
 # Datasource View
 
-  ![DashboardListing view](https://github.com/bold-bi/embedded-bi-samples/assets/129486688/4aaf478b-680a-46a1-b868-631aae2da393)
+ ![Datasource_Iframe_js view](https://github.com/boldbi/iframe-datasource-javascript-sample/assets/129486688/93584224-edee-4482-b569-b4e6cd81de4f)
 
 ## Requirements to run
 * [VS code](https://code.visualstudio.com/download)
@@ -51,7 +51,7 @@
 
  * Once the server is running, you can open your web browser and enter the following URL to navigate to the DatasourceListing.html file(eg. `http://localhost:8000/DatasourceListing.html`).
 
-  ![DashboardListing view](https://github.com/bold-bi/embedded-bi-samples/assets/129486688/4aaf478b-680a-46a1-b868-631aae2da393)
+   ![Datasource_Iframe_js view](https://github.com/boldbi/iframe-datasource-javascript-sample/assets/129486688/93584224-edee-4482-b569-b4e6cd81de4f)
 
 
 ## Important notes
