@@ -1,4 +1,4 @@
-# BoldBI Datasource Iframe with JS Embedding
+# BoldBI Datasource Iframe with Javascript Embedding
 
   This application aims to demonstrate how to embed the data source designer module into your JavaScript-based web application using an iFrame.
   
@@ -6,9 +6,12 @@
 
  ![Datasource_Iframe_js view](https://github.com/boldbi/iframe-datasource-javascript-sample/assets/129486688/93584224-edee-4482-b569-b4e6cd81de4f)
 
-## Requirements to run
-* [VS code](https://code.visualstudio.com/download)
-* [Node JS](https://nodejs.org/en/download)
+## Prerequisites
+
+ * [Node.js](https://nodejs.org/en/)
+ * [Visual Studio Code](https://code.visualstudio.com/download)
+
+ > **NOTE:** Node.js v14.16 to v18.16 are supported.
 
 #### Help link
 
@@ -32,27 +35,30 @@
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/bold-bi/embedded-bi-samples/edit/Revamp-datasource-ifrmae-js-embedding/EmbeddedBIDatasource/) within the application. Please ensure that you have placed it in the application as shown in the following image.
   
     ![EmbedConfig image](https://github.com/bold-bi/embedded-bi-samples/assets/129486688/e7c59dc4-4dfe-4495-a396-b7c21fafc6ff)
+
+ ## Developer IDE
+
+  * Visual studio code(https://code.visualstudio.com/download)
   
 ### Run a Sample Using Visual Studio Code
 
  * Open the sample in **Visual studio code**.
 
- * run this command to install `http-server` package, allows you to run a local HTTP server
+ * Run this command in the terminal to install the `http-server` package, which enables the sample to run a local HTTP server.
 
-  ```bash
-    npm install -g http-server
-  ```
- * run this command to start the HTTP server on a specific port(eg. `http-server -p 8000`)
+     ```bash
+        npm install -g http-server
+     ```
+ * Run this command in the terminal to initiate the HTTP server on a specific port(eg. `http-server -p 8000`)
    
-  ```bash
-    http-server -p <port number>
-  ```
-  > **NOTE:** Replace `<port number>` with the desired port number
-
- * Once the server is running, you can open your web browser and enter the following URL to navigate to the DatasourceListing.html file(eg. `http://localhost:8000/DatasourceListing.html`).
+     ```bash
+        http-server -p <port number>
+      ```
+     > **NOTE:** Replace `<port number>` with the desired port number
+     
+ * Once the server is running, you can open your web browser and navigate to the `DatasourceListing.html` file(eg. `http://localhost:8000/DatasourceListing.html`).
 
    ![Datasource_Iframe_js view](https://github.com/boldbi/iframe-datasource-javascript-sample/assets/129486688/93584224-edee-4482-b569-b4e6cd81de4f)
-
 
 ## Important notes
 
