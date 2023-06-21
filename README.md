@@ -35,6 +35,10 @@
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/bold-bi/embedded-bi-samples/edit/Revamp-datasource-ifrmae-js-embedding/EmbeddedBIDatasource/) within the application. Please ensure that you have placed it in the application as shown in the following image.
   
     ![EmbedConfig image](https://github.com/bold-bi/embedded-bi-samples/assets/129486688/e7c59dc4-4dfe-4495-a396-b7c21fafc6ff)
+
+ ## Developer IDE
+
+  * Visual studio code(https://code.visualstudio.com/download)
   
 ### Run a Sample Using Visual Studio Code
 
