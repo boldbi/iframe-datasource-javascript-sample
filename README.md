@@ -32,7 +32,7 @@
     ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
     ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
 
-* Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/bold-bi/embedded-bi-samples/edit/Revamp-datasource-ifrmae-js-embedding/EmbeddedBIDatasource/) within the application. Please ensure that you have placed it in the application as shown in the following image.
+* Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/iframe-datasource-javascript-sample/tree/master) within the application. Please ensure that you have placed it in the application as shown in the following image.
   
     ![EmbedConfig image](https://github.com/bold-bi/embedded-bi-samples/assets/129486688/e7c59dc4-4dfe-4495-a396-b7c21fafc6ff)
 
