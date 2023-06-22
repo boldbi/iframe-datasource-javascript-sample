@@ -86,7 +86,7 @@ html, body{
     border: 1px solid #b3b3b3;
 }
 
-#ErrorPopup {
+#errorPopup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -98,7 +98,7 @@ html, body{
     display: none;
   }
   
-  #ErrorContent {
+  #errorContent {
     font-size: 16px;
     color: #333;
   }

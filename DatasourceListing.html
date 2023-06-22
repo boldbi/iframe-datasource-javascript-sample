@@ -3,6 +3,7 @@
    <head>      
       <title>Datasource </title>
       <script>window.destroyAll = function () { try { ej.widget.destroyAll($('.e-js').off()); } catch (e) { } $(document.body).html('-'); CollectGarbage(); }; </script>
+      <script type="text/javascript" src="/scripts/jquery-1.10.2.min.js "></script>
       <script>
         var data;
         var xhr= new XMLHttpRequest();
@@ -22,8 +23,8 @@
         xhr.send();
 
         function showError(message) {
-            var ErrorPopup = document.getElementById("ErrorPopup");
-            var ErrorContent = document.getElementById("ErrorContent");
+            var ErrorPopup = document.getElementById("errorPopup");
+            var ErrorContent = document.getElementById("errorContent");
             ErrorContent.textContent = message;
             ErrorPopup.style.display = "block";
             // Hiding remaining content
@@ -33,7 +34,6 @@
             viewerSection.style.display = "none";
          }
      </script>    
-      <script type="text/javascript" src="/scripts/jquery-1.10.2.min.js "></script>
       <script type="text/javascript" src="/scripts/DatasourceListing.js" ></script>
       <script type="text/javascript"  src="/scripts/Properties.js" ></script>      
       <link href="/datasourcelisting.css" rel="stylesheet">
@@ -41,8 +41,8 @@
    </head>
    <body style="width: 100%;height: 100%">
       <!--Error modal for not appending embedConfig.json-->
-      <div id="ErrorPopup">
-         <div id="ErrorContent"></div>
+      <div id="errorPopup">
+         <div id="errorContent"></div>
        </div> 
        <!--Datasource Listing Container-->
       <div id="container" >            
