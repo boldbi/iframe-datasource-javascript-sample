@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 function showDatasourceListing() {
-	 new XMLHttpRequest();
+	var xhr = new XMLHttpRequest();
     xhr.open("GET", dashboardServerApiUrl + "/v2.0/items?ItemType=4", true);
     xhr.setRequestHeader('Authorization', 'bearer ' + accessToken);
     xhr.onreadystatechange = function() {
@@ -26,7 +26,7 @@ function showDatasourceListing() {
     xhr.send();  
 }
 
-//Create datasource
+//Create a new datasource
 $(document).on("click","#create-datasource",function(){
     openDesignerForCreate();
 })
@@ -39,7 +39,7 @@ function openDesignerForCreate() {
 	$("#datasource").append(divIFrame);
 }
 
-//Edit existing Datasource
+//Edit an existing Datasource
 $(document).on("click",".datasource-item",function(){
   $(".datasource-item").removeClass("active");
   $(this).addClass("active");
