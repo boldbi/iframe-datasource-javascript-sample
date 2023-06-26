@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="width:100%; height:100%;">
+   <head>      
+      <title>Datasource </title>
+      <script>window.destroyAll = function () { try { ej.widget.destroyAll($('.e-js').off()); } catch (e) { } $(document.body).html('-'); CollectGarbage(); }; </script>
+      <script type="text/javascript" src="./scripts/jquery-1.10.2.min.js"></script>
+      <script>
+         var data;
+         document.addEventListener("DOMContentLoaded", function() {
+            var xhr= new XMLHttpRequest();
+            xhr.open("GET","embedConfig.json",true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.onreadystatechange= function()
+            {
+                  if (xhr.readyState === 4) {
+                     if (xhr.status === 200) {
+                        data = JSON.parse(xhr.responseText);
+                        loadScripts();
+                     } else {
+                        var errorMessage = "Error loading embedConfig.json is not available";
+                        showError(errorMessage);
+                     }
+                  }
+            }
+            xhr.send();
+            
+            function showError(message) {
+               var ErrorPopups = document.getElementsByClassName("errorPopup");
+               var ErrorContents = document.getElementsByClassName("errorContent");
+            
+               if (ErrorPopups.length > 0 && ErrorContents.length > 0) {
+                  var ErrorPopup = ErrorPopups[0];
+                  var ErrorContent = ErrorContents[0];
+                  ErrorContent.textContent = message;
+                  ErrorPopup.style.display = "block";
+               } 
+               //Hiding remaining content
+               var container = document.getElementById("container");
+               var viewerSection = document.getElementById("viewer-section");
+               container.style.display = "none";
+               viewerSection.style.display = "none";
+            }
+         
+            function loadScripts() {
+               var scriptTags = [
+                  "./scripts/Properties.js",
+                  "./scripts/DatasourceListing.js",
+               ];
+      
+               var head = document.getElementsByTagName("head")[0];      
+               scriptTags.forEach(function(url) {
+                  var script = document.createElement("script");
+                  script.src = url;
+                  script.defer = true;
+                  head.appendChild(script);
+               });
+            }
+         });
+      </script>         
+       <link href="/datasourcelisting.css" rel="stylesheet">
+      
+   </head>
+   <body style="width: 100%;height: 100%">
+      <!--Error modal for not appending embedConfig.json-->
+      <div class="errorPopup">
+         <div class="errorContent"></div>
+       </div> 
+
+       <!--Datasource Listing Container-->
+      <div id="container" >            
+      <div class="header-section"> 
+         <div id="grid-title">All Data sources</div>
+         </div>
+         <div id ="panel"></div>    
+      </div>
+      
+      <!--Datasource view page for create and edit-->
+      <div id="viewer-section">
+         <div id="viewer-header">
+               <button id="create-datasource">Create</button>
+         </div>
+         <div id="datasource">
+            <div id="message" style="display: block; text-align: center; margin-top: 235px; font-size: 20px;">To edit, please select any Data Source.</div>
+      </div>
+      </div>
+   </body>
+</html>
