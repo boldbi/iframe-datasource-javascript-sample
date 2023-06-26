@@ -1,8 +1,8 @@
-# BoldBI Datasource Iframe with Javascript Embedding
+# Data Source Iframe Embedding with JavaScript
 
   This application aims to demonstrate how to embed the data source designer module into your JavaScript-based web application using an iFrame.
   
-# Datasource View
+# Data Source view
 
  ![Datasource_Iframe_js view](https://github.com/boldbi/iframe-datasource-javascript-sample/assets/129486688/93584224-edee-4482-b569-b4e6cd81de4f)
 
@@ -40,7 +40,7 @@
 
   * Visual studio code(https://code.visualstudio.com/download)
   
-### Run a Sample Using Visual Studio Code
+### Run a Sample using Visual Studio Code
 
  * Open the sample in **Visual studio code**.
 
