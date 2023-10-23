@@ -11,7 +11,7 @@
  * [Node.js](https://nodejs.org/en/)
  * [Visual Studio Code](https://code.visualstudio.com/download)
 
- > **NOTE:** Node.js v14.16 to v18.16 are supported.
+ > **NOTE:** Node.js v14.16 to v18.18 are supported.
 
 #### Help link
 
